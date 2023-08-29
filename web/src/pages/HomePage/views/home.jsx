@@ -9,11 +9,11 @@ import './home.css'
 
 const Home = (props) => {
   return (
-    <div className="home-container">
-      <div className="home-nav">
+    <div className="relative h-screen ">
+      <div className="home-nav z-50">
         <Header></Header>
       </div>
-      <div className="home-form">
+      <div className="home-form ">
         <Form />
         {/* <form className="home-form1 ">
           <button type="button" className="button hover">

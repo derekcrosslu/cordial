@@ -61,11 +61,12 @@ export default function App() {
   const snap = useSnapshot(state)
 
   return (
-    <div className="fixed flex h-screen w-full items-center justify-center bg-gray-900">
+    <div className="flex h-full w-full items-center justify-center bg-gray-900">
       <Suspense fallback={<Loader />}>
         <Canvas>
           <SwitchComponent />
         </Canvas>
+        {/* <MyComponent /> */}
       </Suspense>
     </div>
   )
@@ -75,14 +76,14 @@ const Loader = () => {
   const snap = useSnapshot(state)
   return (
     <Suspense fallback={<Loader2 />}>
-      <div className="">
+      <div className="flex  w-full items-center justify-center bg-gray-900 mt-32">
         <video
           autoPlay
           muted
           preload="auto"
           // poster={`/${snap.area}.webp`}
           src={`/${snap.area}.mp4`}
-          className="flex h-screen w-full object-cover"
+          className="flex w-full h-full  webkit-filter home-video "
         ></video>
         {/* <MyComponent /> */}
       </div>
@@ -91,5 +92,5 @@ const Loader = () => {
 }
 
 const Loader2 = () => {
-  return <div className="flex "> loaded</div>
+  return <div className="flex h-full w-full items-center justify-center bg-gray-900 "> loaded</div>
 }

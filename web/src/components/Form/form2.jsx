@@ -1,9 +1,10 @@
 import { navigate, routes } from '@redwoodjs/router'
-import { useMutation, toast } from '@redwoodjs/web'
+import { useMutation } from '@redwoodjs/web'
 import { useSnapshot } from 'valtio'
 import state from '../../store'
 import Enter from './enter'
 import { useEffect } from 'react';
+import { toast, Toaster } from '@redwoodjs/web/toast'
 
 const CREATE_RESERVA_MUTATION = gql`
   mutation CreateReservaMutation($input: CreateReservaInput!) {
@@ -19,7 +20,7 @@ export default function Form2() {
     {
       onCompleted: () => {
         toast.success('Reserva created')
-        navigate(routes.reservas())
+        // navigate(routes.reservas())
       },
       onError: (error) => {
         console.log("error: ", error);
@@ -48,13 +49,14 @@ export default function Form2() {
       numeracion: Object.keys(snap.click).filter((x) => snap.click[x] === true),
       telefono: snap.telefono
     }
-
+    
     if (Object.values(snap.click).some((x) => x === true)) {
       if (snap.nombre === '' || snap.telefono === '' || snap.correo === '' ) {
         alert("Por favor llena todos los campos");
       } else {
 
         console.log("snap.click is not empty: ");
+        // habilitar antes de deploy
         createReserva({ variables: { input: inputVars } })
         state.reservacionHecha = true;
         console.log("inputVars: ", inputVars);
@@ -68,6 +70,7 @@ export default function Form2() {
 
   return (
     <div className="flex  items-center justify-center gap-2 ">
+      <Toaster toastOptions={{ className: 'rw-toast', duration: 6000 }} />
       <div className="home-border ">
         <div className="home-filter ">
           <input

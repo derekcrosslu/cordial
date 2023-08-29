@@ -61,7 +61,9 @@ const snap = useSnapshot(state)
 
     const handleClick = (e) => {
     console.log('click', e.object.name, snap.click);
-    state.click[e.object.name] = !snap.click[e.object.name]
+      if (e.object.name) {
+      state.click[e.object.name] = !snap.click[e.object.name]
+    }
     }
   const handleHover = (e) => {
     console.log('hover', e.object.name);
@@ -122,7 +124,7 @@ const snap = useSnapshot(state)
               scale={1}
             /> */}
             <directionalLight
-              name="Directional Light"
+         
               castShadow
               intensity={1.59}
               shadow-mapSize-width={1024}
@@ -138,7 +140,7 @@ const snap = useSnapshot(state)
               position={[668.16, 693.8, -268.71]}
             />
             <hemisphereLight
-              name="Default Ambient Light"
+     
               intensity={0.75}
               color="#798c9f"
             />
@@ -148,19 +150,19 @@ const snap = useSnapshot(state)
               material={materials.Material_59}
               // position={[10, 10, 20]}
         
-                name='Arbol1'
+          
             />
             <mesh
               geometry={nodes.sub01001.geometry}
               material={materials.Material_61}
                 // position={[10, 10, 20]}
-                name='Arbol2'
+              
             />
             <mesh
               geometry={nodes.sub02.geometry}
               material={materials.Material_60}
                 // position={[10, 10, 20]}
-                name='Arbol3'
+  
             />
           </group>
   
@@ -169,67 +171,67 @@ const snap = useSnapshot(state)
               geometry={nodes.Grass_20001.geometry}
               material={materials.Material_47}
                 position={[-3.47, -9.45, -0.47]}
-                name='Grass_20001'
+       
             />
             <mesh
               geometry={nodes.Grass_20002.geometry}
               material={materials.Material_48}
                 position={[-3.47, -9.45, -0.47]}
-                name='Grass_20002'
+     
             />
             <mesh
               geometry={nodes.Grass_20003.geometry}
               material={materials.Material_49}
                 position={[-3.47, -9.45, -0.47]}
-                name='Grass_20003'
+          
             />
             <mesh
               geometry={nodes.Grass_20004.geometry}
               material={materials.Material_50}
                 position={[-3.47, -9.45, -0.47]}
-                name='Grass_20004'
+             
             />
             <mesh
               geometry={nodes.Grass_20005.geometry}
               material={materials.Material_51}
                 position={[-3.47, -9.45, -0.47]}
-                name='Grass_20005'
+    
             />
             <mesh
               geometry={nodes.Grass_20006.geometry}
               material={materials.Material_52}
                 position={[-3.47, -9.45, -0.47]}
-                name='Grass_20006'
+   
             />
             <mesh
               geometry={nodes.Grass_20007.geometry}
               material={materials.Material_53}
                 position={[-3.47, -9.45, -0.47]}
-                name='Grass_20007'
+           
             />
             <mesh
               geometry={nodes.Grass_20008.geometry}
               material={materials.Material_54}
                 position={[-3.47, -9.45, -0.47]}
-                name='Grass_20008'
+     
             />
             <mesh
               geometry={nodes.Grass_20009.geometry}
               material={materials.Material_55}
                 position={[-3.47, -9.45, -0.47]}
-                name='Grass_20009'
+   
             />
             <mesh
               geometry={nodes.Grass_20010.geometry}
               material={materials.Material_56}
                 position={[-3.47, -9.45, -0.47]}
-                name='Grass_20010'
+             
             />
             <mesh
               geometry={nodes.Grass_20012.geometry}
               material={materials.Material_57}
                 position={[-3.47, -9.45, -0.47]}
-                name='Grass_20012'
+       
             />
           </group>
           <group position={[-22.37, -13.94, 6.44]}>
@@ -259,19 +261,19 @@ const snap = useSnapshot(state)
               geometry={nodes.Cube047.geometry}
               material={materials.Material_7}
                 position={[22.37, 13.94, -6.44]}
-                name='Soporte2'
+           
             />
             <mesh
               geometry={nodes.Cube049.geometry}
               material={materials.Material_7}
                 position={[22.37, 13.94, -6.44]}
-                name='Soporte1'
+               
             />
             <mesh
               geometry={nodes.Cube051.geometry}
               material={materials.Material_7}
                 position={[22.37, 13.94, -6.44]}
-                name='Soporte3'
+             
             />
             
           </group>
@@ -279,66 +281,66 @@ const snap = useSnapshot(state)
           {/* <mesh
             geometry={nodes.Cube023.geometry}
               material={materials.Material_28}
-              name="Cube023"
+            
           /> */}
           <mesh
             geometry={nodes.Cube027.geometry}
               material={materials.Material_31}
-              name="Cube027"
+ 
           />
           <mesh
             geometry={nodes.Cube028.geometry}
               material={materials.Material_58}
-              name="Cube028"
+           
           />
           <mesh
             geometry={nodes.Cube040.geometry}
               material={materials.Material_42}
-              name="Cube040"
+           
           />
           <mesh
             geometry={nodes.Cube041.geometry}
               material={materials.Material_43}
-              name="Cube041"
+              
           />
           <mesh
             geometry={nodes.Cube043.geometry}
               material={materials.Material_44}
-              name="Cube043"
+   
 
           />
           <mesh
             geometry={nodes.NUEVO_PATIO.geometry}
               material={materials.Material_62}
-              name="NUEVO_PATIO"
+           
 
 
           />
           <mesh
             geometry={nodes.Plane007.geometry}
               material={materials.Material_0}
-              name="Plane007"
+    
           />
           <mesh
             geometry={nodes.Plane017.geometry}
               material={materials.Material_1}
-              name="Plane017"
+       
           />
           <mesh
             geometry={nodes.PLATO.geometry}
-              name="PLATO"
+      
                       color={[0, 0.5, 1]}
                 intensity={0.1}
           >
             <mesh
               geometry={nodes.Circle001.geometry}
                 material={materials.Material_19}
-                name="Circle001"
+         
             />
             <mesh
               geometry={nodes.Plane002.geometry}       
                 material={materials.Material_20}
-                name="Plane002"
+              
               />
 
                   <meshStandardMaterial color={snap.plato ? 'hotpink' : 'white'} />
@@ -346,174 +348,174 @@ const snap = useSnapshot(state)
           <mesh
             geometry={nodes.potted_plant_04001.geometry}
               material={materials.Material_63}
-              name="potted_plant_04001"
+    
           />
           <mesh
             geometry={nodes.potted_plant_04002.geometry}
               material={materials.Material_64}
-              name="potted_plant_04002"
+       
           />
           <mesh
             geometry={nodes.potted_plant_04003.geometry}
               material={materials.Material_65}
-              name="potted_plant_04003"
+             
           />
           <mesh
             geometry={nodes.SILLAS.geometry}
               material={materials.Material_10}
-              name="SILLAS"
+        
             >
                <meshStandardMaterial color={snap.sillas ? 'hotpink' : 'white'} />
             <mesh
               geometry={nodes.COJINSILLA.geometry}
                 material={materials.Material_13}
-                name="COJINSILLA"
+         
             />
             <mesh
               geometry={nodes.Cube001.geometry}
                 material={materials.Material_12}
-                name="Cube001"
+              
             />
             <mesh
               geometry={nodes.Cube002.geometry}
                 material={materials.Material_11}
-                name="Cube002"
+           
             />
             <mesh
               geometry={nodes.Cube004.geometry}
                 material={materials.Material_17}
-                name="Cube004"
+    
             />
             <mesh
               geometry={nodes.Cube011.geometry}
                 material={materials.Material_14}
-                name="Cube011"
+             
             />
             <mesh
               geometry={nodes.Cube012.geometry}
                 material={materials.Material_15}
-                name="Cube012"
+         
             />
             <mesh
               geometry={nodes.Cube014.geometry}
                 material={materials.Material_16}
-                name="Cube014"
+          
             />
           </mesh>
           <mesh
             geometry={nodes.Cube063.geometry}
               material={materials.Material_21}
-              name="Cube063"
+         
           />
           <mesh
             geometry={nodes.Cube063_1.geometry}
               material={materials.Material_22}
-              name="Cube063_1"
+           
           />
           <mesh
             geometry={nodes.Cube064.geometry}
               material={materials.Material_23}
-              name="Cube064"
+ 
           />
           <mesh
             geometry={nodes.Cube065.geometry}
               material={materials.Material_24}
-              name="Cube065"
+              
           />
           <mesh
             geometry={nodes.Cube065_1.geometry}
               material={materials.Material_25}
-              name="Cube065_1"
+            
           />
           <mesh
             geometry={nodes.Cube067.geometry}
               material={materials.Material_26}
-              name="Cube067"
+            
           />
           <mesh
             geometry={nodes.Cube067_1.geometry}
               material={materials.Material_27}
-              name="Cube067_1"
+           
           />
           <mesh
             geometry={nodes.Cube068.geometry}
               material={materials.Material_29}
-              name="Cube068"
+          
           />
           <mesh
             geometry={nodes.Cube068_1.geometry}
               material={materials.Material_30}
-              name="Cube068_1"
+          
           />
           <mesh
             geometry={nodes.Cube037.geometry}
               material={materials.Material_32}
-              name="Cube037"
+      
           />
           <mesh
             geometry={nodes.Cube037_1.geometry}
               material={materials.Material_33}
-              name="Cube037_1"
+           
           />
           <mesh
             geometry={nodes.Cube048_1.geometry}
               material={materials.Material_34}
-              name="Cube048_1"
+
           />
           <mesh
             geometry={nodes.Cube048_2.geometry}
               material={materials.Material_35}
-              name="Cube048_2"
+     
           />
           <mesh
             geometry={nodes.Cube049_1.geometry}
               material={materials.Material_36}
-              name="Cube049_1"
+              
           />
           <mesh
             geometry={nodes.Cube049_2.geometry}
               material={materials.Material_37}
-              name="Cube049_2"
+            
           />
           <mesh
             geometry={nodes.Cube055.geometry}
               material={materials.Material_38}
-              name="Cube055"
+       
           />
           <mesh
             geometry={nodes.Cube055_1.geometry}
               material={materials.Material_39}
-              name="Cube055_1"
+       
           />
           <mesh
             geometry={nodes.Cube043_1.geometry}
               material={materials.Material_40}
-              name="Cube043_1"
+            
           />
           <mesh
             geometry={nodes.Cube043_2.geometry}
               material={materials.Material_41}
-              name="Cube043_2"
+          
           />
           <mesh
             geometry={nodes.Cube062.geometry}
               material={materials.Material_45}
-              name="Cube062"
+   
           />
           <mesh
             geometry={nodes.Cube062_1.geometry}
               material={materials.Material_46}
-              name="Cube062_1"
+          
           />
           <mesh
             geometry={nodes.Plane006.geometry}
               material={materials.Material_2}
-              name="Plane006"
+         
           />
           <mesh
             geometry={nodes.Plane006_1.geometry}
               material={materials.Material_3}
-              name="Plane006_1"
+    
             
             /> 
             </Select>

@@ -31,7 +31,9 @@ export default function Model(props) {
 
   const handleClick = (e) => {
     console.log('click', e.object.name, snap.click);
-    state.click[e.object.name] = !snap.click[e.object.name]
+    if (e.object.name) {
+      state.click[e.object.name] = !snap.click[e.object.name]
+    }
     }
   const handleHover = (e) => {
     console.log('hover', e.object.name);
@@ -52,7 +54,7 @@ export default function Model(props) {
               opacity={0.75}
             />
             <directionalLight
-              name="Directional Light"
+
               castShadow
               intensity={0.75}
               shadow-mapSize-width={1024}
@@ -68,7 +70,7 @@ export default function Model(props) {
               position={[668.16, 693.8, -268.71]}
             />
             <spotLight
-              name="Spot Light"
+      
               castShadow
               intensity={0.75}
               angle={Math.PI / 6}
@@ -82,7 +84,7 @@ export default function Model(props) {
               position={[235.06, 1143.24, 598.46]}
             />
             <hemisphereLight
-              name="Default Ambient Light"
+
               intensity={0.75}
               color="#798c9f"
             />
@@ -293,7 +295,7 @@ export default function Model(props) {
               geometry={nodes.COLUMNA_VENTANA.geometry}
               material={materials.Material_91}
                 position={[4.09, -7.88, 2.71]}
-              name='COLUMNA_VENTANA'
+             
             />
             <mesh
               geometry={nodes.Cube048.geometry}

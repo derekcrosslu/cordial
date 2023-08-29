@@ -8,7 +8,7 @@ export default function buttons() {
     state.area = str
   }
   return (
-    <div className="home-buttons ">
+    <div className="home-buttons   gap-10">
       <button
         type="button"
         className="home-bar button flex items-center justify-center"

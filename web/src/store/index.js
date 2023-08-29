@@ -34,6 +34,7 @@ const state = proxy({
   modelLoading: true,
   hover: '',
   click: {},
+  contacto:'',
 })
 
 export default state

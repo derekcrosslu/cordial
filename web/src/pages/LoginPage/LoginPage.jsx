@@ -17,6 +17,7 @@ import { useAuth } from 'src/auth'
 
 const LoginPage = () => {
   const { isAuthenticated, logIn } = useAuth()
+  console.log("isAuthenticated: ");
 
   useEffect(() => {
     if (isAuthenticated) {
@@ -30,6 +31,7 @@ const LoginPage = () => {
   }, [])
 
   const onSubmit = async (data) => {
+    console.log("data: ", data);
     const response = await logIn({
       username: data.username,
       password: data.password,
