@@ -22,6 +22,8 @@ import state from '../../store'
 
 export default function Model(props) {
   const { nodes, materials } = useGLTF('/terraza.glb')
+  // const mesaNode  = useGLTF('/mesa.glb')
+  
   const [isPending, startTransition] = useTransition()
 const snap = useSnapshot(state)
   state.modelLoading = isPending
@@ -66,7 +68,7 @@ const snap = useSnapshot(state)
     }
     }
   const handleHover = (e) => {
-    console.log('hover', e.object.name);
+    // console.log('hover', e.object.name);
     state.hover = e.object.name
   }
   
@@ -237,8 +239,8 @@ const snap = useSnapshot(state)
           <group position={[-22.37, -13.94, 6.44]}>
             <mesh
               geometry={nodes.Cube005.geometry}
-              // material={materials.Material_12}
-                material={snap.click['Mesa1']?materials.Material_10:snap.hover==='Mesa1'?materials.Material_19:materials.Material_12}
+              material={materials.Material_3}
+                // material={snap.click['Mesa1']?materials.Material_10:snap.hover==='Mesa1'?materials.Material_19:materials.Material_12}
                 position={[22.37, 13.94, -6.44]}
                 name='Mesa1'
             />
@@ -250,13 +252,15 @@ const snap = useSnapshot(state)
                 position={[22.37, 13.94, -6.44]}
                 name='Mesa3'
             />
-            <mesh
-              geometry={nodes.Cube044.geometry}
+            <mesh 
+              geometry={nodes.Cube005.geometry}
               // material={materials.Material_12}
-                material={snap.click['Mesa2']?materials.Material_10:snap.hover==='Mesa2'?materials.Material_19:materials.Material_12}
+              material={materials.Material_3}
+                // material={snap.click['Mesa2']?materials.Material_10:snap.hover==='Mesa2'?materials.Material_19:materials.Material_12}
                 position={[22.37, 13.94, -6.44]}
                 name='Mesa2'
             />
+        
             <mesh
               geometry={nodes.Cube047.geometry}
               material={materials.Material_7}
@@ -366,11 +370,11 @@ const snap = useSnapshot(state)
         
             >
                <meshStandardMaterial color={snap.sillas ? 'hotpink' : 'white'} />
-            <mesh
-              geometry={nodes.COJINSILLA.geometry}
-                material={materials.Material_13}
+            {/* <mesh 
+//               geometry={nodes.COJINSILLA.geometry}
+                // material={materials.Material_13}
          
-            />
+            // />*/}
             <mesh
               geometry={nodes.Cube001.geometry}
                 material={materials.Material_12}

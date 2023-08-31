@@ -6,7 +6,7 @@
 # https://redwoodjs.com/docs/app-configuration-redwood-toml
 
 [web]
-  title = "Redwood App"
+  title = "Barranco"
   port = 8910
   host = '0.0.0.0'
   # apiUrl = "/api"
