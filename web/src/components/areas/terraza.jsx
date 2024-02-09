@@ -53,7 +53,7 @@ const snap = useSnapshot(state)
       console.log('reservacion', snap.reservacion);
     // camera.position.x = Math.cos(clock.getElapsedTime() / 7)
     // camera.position.z = Math.sin(clock.getElapsedTime() / 7)
-// camera.position.set(0.5, 8,   7)
+camera.position.set(-11, 3,   10)
 //       camera.rotateY(0.1)
 //       camera.rotateX(-0.4)
 //       camera.rotateZ(0.55)
@@ -62,7 +62,22 @@ const snap = useSnapshot(state)
   })
 
     const handleClick = (e) => {
-    console.log('click', e.object.name, snap.click);
+      console.log('click', e.object.name, snap.click);
+      console.log('MESAS', nodes.MESAS);
+
+
+function twice(num) {
+  let numString = String(num);
+  let halfLength = numString.length / 2;
+  let firstHalf = numString.slice(0, halfLength);
+  let secondHalf = numString.slice(halfLength);
+
+  if (firstHalf === secondHalf) {
+    return num;
+  } else {
+    return num * 2;
+  }
+}
       if (e.object.name) {
       state.click[e.object.name] = !snap.click[e.object.name]
     }
@@ -239,27 +254,37 @@ const snap = useSnapshot(state)
           <group position={[-22.37, -13.94, 6.44]}>
             <mesh
               geometry={nodes.Cube005.geometry}
-              material={materials.Material_3}
-                // material={snap.click['Mesa1']?materials.Material_10:snap.hover==='Mesa1'?materials.Material_19:materials.Material_12}
+            //  material={materials.Material_9}
+                material={snap.click['Mesa1']?materials.Material_10:snap.hover==='Mesa1'?materials.Material_19:materials.Material_12}
                 position={[22.37, 13.94, -6.44]}
                 name='Mesa1'
-            />
-            <mesh
-              geometry={nodes.Cube007.geometry}
-                // geometry={nodes.Cube048.geometry}
-              // material={materials.Material_12}
-                material={snap.click['Mesa3']?materials.Material_10:snap.hover==='Mesa3'?materials.Material_19:materials.Material_12}
-                position={[22.37, 13.94, -6.44]}
-                name='Mesa3'
-            />
-            <mesh 
+              />
+               <mesh 
               geometry={nodes.Cube005.geometry}
               // material={materials.Material_12}
-              material={materials.Material_3}
-                // material={snap.click['Mesa2']?materials.Material_10:snap.hover==='Mesa2'?materials.Material_19:materials.Material_12}
-                position={[22.37, 13.94, -6.44]}
+              // material={materials.Material_9}
+                material={snap.click['Mesa2']?materials.Material_10:snap.hover==='Mesa2'?materials.Material_19:materials.Material_12}
+                position={[39.37, 13.94, -6.44]}
                 name='Mesa2'
+              />
+
+              
+                    <mesh
+              geometry={nodes.Cube005.geometry}
+                // material={materials.Material_9}
+                  material={snap.click['Mesa3']?materials.Material_10:snap.hover==='Mesa3'?materials.Material_19:materials.Material_12}
+                position={[50, 13.94, -35]}
+             name='Mesa3'
             />
+            <mesh
+              geometry={nodes.Cube051.geometry}
+                // geometry={nodes.Cube048.geometry}
+              material={materials.Material_6}
+              
+                position={[22.37, 13.94, -6.44]}
+     
+            />
+           
         
             <mesh
               geometry={nodes.Cube047.geometry}
@@ -273,12 +298,7 @@ const snap = useSnapshot(state)
                 position={[22.37, 13.94, -6.44]}
                
             />
-            <mesh
-              geometry={nodes.Cube051.geometry}
-              material={materials.Material_7}
-                position={[22.37, 13.94, -6.44]}
-             
-            />
+      
             
           </group>
 
@@ -287,16 +307,16 @@ const snap = useSnapshot(state)
               material={materials.Material_28}
             
           /> */}
-          <mesh
+          {/* <mesh
             geometry={nodes.Cube027.geometry}
               material={materials.Material_31}
  
-          />
-          <mesh
+          /> */}
+          {/* <mesh
             geometry={nodes.Cube028.geometry}
               material={materials.Material_58}
            
-          />
+          /> */}
           <mesh
             geometry={nodes.Cube040.geometry}
               material={materials.Material_42}
@@ -316,10 +336,9 @@ const snap = useSnapshot(state)
           <mesh
             geometry={nodes.NUEVO_PATIO.geometry}
               material={materials.Material_62}
-           
-
-
           />
+ {/* <primitive object={nodes.PATIO2}  /> */}
+{/* <primitive object={nodes.MESAS}  /> */}
           <mesh
             geometry={nodes.Plane007.geometry}
               material={materials.Material_0}
@@ -371,10 +390,10 @@ const snap = useSnapshot(state)
             >
                <meshStandardMaterial color={snap.sillas ? 'hotpink' : 'white'} />
             {/* <mesh 
-//               geometry={nodes.COJINSILLA.geometry}
-                // material={materials.Material_13}
+               geometry={nodes.COJINSILLA.geometry}
+                 material={materials.Material_13}
          
-            // />*/}
+            /> */}
             <mesh
               geometry={nodes.Cube001.geometry}
                 material={materials.Material_12}

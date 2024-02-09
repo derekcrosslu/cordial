@@ -30,7 +30,6 @@ const Navbar = () => {
         <a href='#' className='py-4 px-8 ' onClick={()=>handleClick('terraza')}>TERRAZA</a>
         <a href='#' className='py-4 px-8 ' onClick={()=>handleClick('sala')}>SALA</a>     
         <a href='#' className='py-4 px-8 ' onClick={()=>handleReserva('reservas')}>RESERVAS</a>     
-        <a href='#' className='py-4 px-8 ' onClick={()=>handleReserva('contacto')}>CONTACTO</a>
         <a href='https://cordial-sable.vercel.app/reservas' className='py-4 px-8 ' >ADMIN</a>
         
       </div>

@@ -13,10 +13,10 @@
   "dependencies": {
     "@react-three/drei": "^9.80.3",
     "@react-three/fiber": "^8.13.7",
-    "@redwoodjs/auth-dbauth-web": "6.1.0",
-    "@redwoodjs/forms": "6.1.0",
-    "@redwoodjs/router": "6.1.0",
-    "@redwoodjs/web": "6.1.0",
+    "@redwoodjs/auth-dbauth-web": "6.6.4",
+    "@redwoodjs/forms": "6.6.4",
+    "@redwoodjs/router": "6.6.4",
+    "@redwoodjs/web": "6.6.4",
     "date-fns": "^2.30.0",
     "humanize-string": "2.1.0",
     "prop-types": "15.8.1",
@@ -27,7 +27,7 @@
     "valtio": "^1.11.2"
   },
   "devDependencies": {
-    "@redwoodjs/vite": "6.1.0",
+    "@redwoodjs/vite": "6.6.4",
     "autoprefixer": "^10.4.15",
     "postcss": "^8.4.28",
     "postcss-loader": "^7.3.3",
