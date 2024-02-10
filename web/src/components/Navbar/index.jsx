@@ -2,6 +2,7 @@ import './index.css';
 import React from 'react'
 import { snapshot } from 'valtio'
 import state from '../../store'
+import { Link, routes, navigate } from '@redwoodjs/router'
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = React.useState(false)
@@ -28,10 +29,10 @@ const Navbar = () => {
       <div className={`nav_items ${menuOpen && "open"} gap-0.5` }>
         <a href='#' className='py-4 px-8 ' onClick={()=>handleClick('bar')}>BAR</a>
         <a href='#' className='py-4 px-8 ' onClick={()=>handleClick('terraza')}>TERRAZA</a>
-        <a href='#' className='py-4 px-8 ' onClick={()=>handleClick('sala')}>SALA</a>     
-        <a href='#' className='py-4 px-8 ' onClick={()=>handleReserva('reservas')}>RESERVAS</a>     
-        <a href='https://cordial-sable.vercel.app/reservas' className='py-4 px-8 ' >ADMIN</a>
-        
+        <a href='#' className='py-4 px-8 ' onClick={()=>handleClick('sala')}>SALA</a>
+        <a href='#' className='py-4 px-8 ' onClick={()=>handleReserva('reservas')}>RESERVAS</a>
+        {/* <a href='https://cordial-sable.vercel.app/reservas' className='py-4 px-8 ' >ADMIN</a> */}
+                <a href='#' className='py-4 px-8 ' onClick={()=>navigate(routes.reservas())}>ADMIIN</a>
       </div>
       <div className={`nav_toggle ${menuOpen && "open"}`} onClick={() => setMenuOpen(!menuOpen)}>
         <span  ></span>
