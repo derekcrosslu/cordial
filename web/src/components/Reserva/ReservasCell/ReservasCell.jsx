@@ -11,7 +11,7 @@ export const QUERY = gql`
       nombre
       area
       invitados
-      numeracion
+      # numeracion
       mesa
       fecha
       telefono

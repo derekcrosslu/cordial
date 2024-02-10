@@ -4346,6 +4346,40 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@redwoodjs/auth-supabase-api@npm:^6.6.4":
+  version: 6.6.4
+  resolution: "@redwoodjs/auth-supabase-api@npm:6.6.4"
+  dependencies:
+    "@babel/runtime-corejs3": 7.23.6
+    core-js: 3.34.0
+    jsonwebtoken: 9.0.2
+  checksum: 8bb6b16e0c1103cfea6b61d67ea991955a2c13f2375d15ddb031cb08b89f29459f4f4e4ff55d18ec41a3638da656722681c44488973b76095ae3ff6cf1b75f75
+  languageName: node
+  linkType: hard
+
+"@redwoodjs/auth-supabase-setup@npm:6.6.4":
+  version: 6.6.4
+  resolution: "@redwoodjs/auth-supabase-setup@npm:6.6.4"
+  dependencies:
+    "@babel/runtime-corejs3": 7.23.6
+    "@redwoodjs/cli-helpers": 6.6.4
+    core-js: 3.34.0
+  checksum: b6f2626f86c35862b4a2026f57accea1dc8a72ad4b9f6072585cbb0c91c70b2ff6ad1cfab52ea2ecbba05b7d449dc89af402782b00e9c6bcba0e8d5960e33b95
+  languageName: node
+  linkType: hard
+
+"@redwoodjs/auth-supabase-web@npm:^6.6.4":
+  version: 6.6.4
+  resolution: "@redwoodjs/auth-supabase-web@npm:6.6.4"
+  dependencies:
+    "@babel/runtime-corejs3": 7.23.6
+    core-js: 3.34.0
+  peerDependencies:
+    "@supabase/supabase-js": 2.39.0
+  checksum: a056a1f1bc1a68bbc3b6b62f83b1b9ddc9d99e4ac5149a35908823d23eb0d2e57cbc76bc446f5d11c5758c4b7e44d926048252bbaa3f2ec485fe00a9c113243f
+  languageName: node
+  linkType: hard
+
 "@redwoodjs/auth@npm:6.6.4":
   version: 6.6.4
   resolution: "@redwoodjs/auth@npm:6.6.4"
@@ -4950,6 +4984,77 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@supabase/functions-js@npm:^2.1.5":
+  version: 2.2.0
+  resolution: "@supabase/functions-js@npm:2.2.0"
+  dependencies:
+    "@supabase/node-fetch": ^2.6.14
+  checksum: 5884c6f0c213f6408834e9425842923685ebdca0ec42e89a0f3086d15ac81c285c790befe19fa01c6a961c39ccc7b7aae7c3608c408a65af785beaeddb2ef387
+  languageName: node
+  linkType: hard
+
+"@supabase/gotrue-js@npm:^2.60.0":
+  version: 2.62.2
+  resolution: "@supabase/gotrue-js@npm:2.62.2"
+  dependencies:
+    "@supabase/node-fetch": ^2.6.14
+  checksum: 132bf31f00d321466a5e956e4fcd24ad7d2908b65bafa4b10d7e5c77fb0bd39ca643806de879acd71ae83089a7a581300c91f6a3717a1afec8e122c8dfd05e2c
+  languageName: node
+  linkType: hard
+
+"@supabase/node-fetch@npm:^2.6.14":
+  version: 2.6.15
+  resolution: "@supabase/node-fetch@npm:2.6.15"
+  dependencies:
+    whatwg-url: ^5.0.0
+  checksum: 98d25cab2eba53c93c59e730d52d50065b1a7fe216c65224471e83e2064ebd45ae51ad09cb39ec263c3cb59e3d41870fc2e789ea2e9587480d7ba212b85daf38
+  languageName: node
+  linkType: hard
+
+"@supabase/postgrest-js@npm:^1.9.0":
+  version: 1.11.0
+  resolution: "@supabase/postgrest-js@npm:1.11.0"
+  dependencies:
+    "@supabase/node-fetch": ^2.6.14
+  checksum: 41473898c8d6c01befdcaba51e19eaa9d1895bc1fa1ede2727af8630adb4217be5ff3f991a128510708026e1d5178ea40df958115808f145907e8ed54f3e144b
+  languageName: node
+  linkType: hard
+
+"@supabase/realtime-js@npm:^2.9.3":
+  version: 2.9.3
+  resolution: "@supabase/realtime-js@npm:2.9.3"
+  dependencies:
+    "@supabase/node-fetch": ^2.6.14
+    "@types/phoenix": ^1.5.4
+    "@types/ws": ^8.5.10
+    ws: ^8.14.2
+  checksum: 321c98237e3255cad221ed16b54739ce327d395b80faba1416ba81577f043681ae0dde10e0ac1b7e3427412d1dbb35cb4b66d8466c21239932aa3dca6b9cc87c
+  languageName: node
+  linkType: hard
+
+"@supabase/storage-js@npm:^2.5.4":
+  version: 2.5.5
+  resolution: "@supabase/storage-js@npm:2.5.5"
+  dependencies:
+    "@supabase/node-fetch": ^2.6.14
+  checksum: 5a81f0d21a1094187390d60d6d993b7fbcaef355611b3ec74fe6f333921703d6e7f7e8000c1e729b25fba11b91f6b40ffbff7c64af3b961403b50dc01808cbd1
+  languageName: node
+  linkType: hard
+
+"@supabase/supabase-js@npm:^2.39.3":
+  version: 2.39.3
+  resolution: "@supabase/supabase-js@npm:2.39.3"
+  dependencies:
+    "@supabase/functions-js": ^2.1.5
+    "@supabase/gotrue-js": ^2.60.0
+    "@supabase/node-fetch": ^2.6.14
+    "@supabase/postgrest-js": ^1.9.0
+    "@supabase/realtime-js": ^2.9.3
+    "@supabase/storage-js": ^2.5.4
+  checksum: b36f685579ed3fb35e7073105d99937b3e09762df93da9db40fb1c925388cf9b3a20b3e22a1b5e57e65ad0ecf93a602373d63f9aef7c4302f3557b0ffb3c82e3
+  languageName: node
+  linkType: hard
+
 "@szmarczak/http-timer@npm:^1.1.2":
   version: 1.1.2
   resolution: "@szmarczak/http-timer@npm:1.1.2"
@@ -5524,6 +5629,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/phoenix@npm:^1.5.4":
+  version: 1.6.4
+  resolution: "@types/phoenix@npm:1.6.4"
+  checksum: b2094c2e3065ce02f755bf3c4fde433cd9313bc97a2e34521b98bcc074ff9fd50b5af127b67cb8833c3d8b778d0756d67a25913f368669317fed3bd68cf7e752
+  languageName: node
+  linkType: hard
+
 "@types/prop-types@npm:*":
   version: 15.7.5
   resolution: "@types/prop-types@npm:15.7.5"
@@ -5715,6 +5827,15 @@ __metadata:
   dependencies:
     "@types/node": "*"
   checksum: 9fb5aaeb2899f2c5aa55946656a39fdf679e48ec4eff557901215249ac84f435853b1d224214e88a93fcbca4bc9a0b0af01113d76f37db0b5873a882e5e99935
+  languageName: node
+  linkType: hard
+
+"@types/ws@npm:^8.5.10":
+  version: 8.5.10
+  resolution: "@types/ws@npm:8.5.10"
+  dependencies:
+    "@types/node": "*"
+  checksum: e9af279b984c4a04ab53295a40aa95c3e9685f04888df5c6920860d1dd073fcc57c7bd33578a04b285b2c655a0b52258d34bee0a20569dca8defb8393e1e5d29
   languageName: node
   linkType: hard
 
@@ -6781,6 +6902,7 @@ __metadata:
   dependencies:
     "@redwoodjs/api": 6.6.4
     "@redwoodjs/auth-dbauth-api": 6.6.4
+    "@redwoodjs/auth-supabase-api": ^6.6.4
     "@redwoodjs/graphql-server": 6.6.4
   languageName: unknown
   linkType: soft
@@ -18321,6 +18443,7 @@ __metadata:
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
     "@redwoodjs/auth-dbauth-setup": 6.6.4
+    "@redwoodjs/auth-supabase-setup": 6.6.4
     "@redwoodjs/core": 6.6.4
     prettier-plugin-tailwindcss: ^0.5.3
   languageName: unknown
@@ -21008,10 +21131,12 @@ __metadata:
     "@react-three/drei": ^9.80.3
     "@react-three/fiber": ^8.13.7
     "@redwoodjs/auth-dbauth-web": 6.6.4
+    "@redwoodjs/auth-supabase-web": ^6.6.4
     "@redwoodjs/forms": 6.6.4
     "@redwoodjs/router": 6.6.4
     "@redwoodjs/vite": 6.6.4
     "@redwoodjs/web": 6.6.4
+    "@supabase/supabase-js": ^2.39.3
     autoprefixer: ^10.4.15
     date-fns: ^2.30.0
     humanize-string: 2.1.0
@@ -21584,6 +21709,21 @@ __metadata:
     utf-8-validate:
       optional: true
   checksum: aec4ef4eb65821a7dde7b44790f8699cfafb7978c9b080f6d7a98a7f8fc0ce674c027073a78574c94786ba7112cc90fa2cc94fc224ceba4d4b1030cff9662494
+  languageName: node
+  linkType: hard
+
+"ws@npm:^8.14.2":
+  version: 8.16.0
+  resolution: "ws@npm:8.16.0"
+  peerDependencies:
+    bufferutil: ^4.0.1
+    utf-8-validate: ">=5.0.2"
+  peerDependenciesMeta:
+    bufferutil:
+      optional: true
+    utf-8-validate:
+      optional: true
+  checksum: a7783bb421c648b1e622b423409cb2a58ac5839521d2f689e84bc9dc41d59379c692dd405b15a997ea1d4c0c2e5314ad707332d0c558f15232d2bc07c0b4618a
   languageName: node
   linkType: hard
 

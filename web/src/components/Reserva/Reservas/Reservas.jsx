@@ -45,7 +45,7 @@ const ReservasList = ({ reservas }) => {
             <th>Nombre</th>
             <th>Area</th>
             <th>Invitados</th>
-            <th>Numeracion</th>
+            {/* <th>Numeracion</th> */}
             <th>Mesa</th>
             <th>Fecha</th>
             <th>Telefono</th>
@@ -62,7 +62,7 @@ const ReservasList = ({ reservas }) => {
               <td>{truncate(reserva.nombre)}</td>
               <td>{truncate(reserva.area)}</td>
               <td>{truncate(reserva.invitados)}</td>
-              <td>{truncate(reserva.numeracion)}</td>
+              {/* <td>{truncate(reserva.numeracion)}</td> */}
               <td>{truncate(reserva.mesa)}</td>
               <td>{timeTag(reserva.fecha)}</td>
               <td>{truncate(reserva.telefono)}</td>

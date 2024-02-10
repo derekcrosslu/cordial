@@ -1,3 +1,4 @@
+import { parseJWT } from '@redwoodjs/api'
 import { AuthenticationError, ForbiddenError } from '@redwoodjs/graphql-server'
 
 import { db } from './db'
@@ -19,15 +20,37 @@ import { db } from './db'
  * fields to the `select` object below once you've decided they are safe to be
  * seen if someone were to open the Web Inspector in their browser.
  */
-export const getCurrentUser = async (session) => {
-  if (!session || typeof session.id !== 'number') {
-    throw new Error('Invalid session')
+// export const getCurrentUser = async (session) => {
+//   if (!session || typeof session.id !== 'number') {
+//     throw new Error('Invalid session')
+//   }
+
+//   return await db.user.findUnique({
+//     where: { id: session.id },
+//     select: { id: true },
+//   })
+// }
+
+// type RedwoodUser = Record<string, unknown> & { roles?: string[] }
+
+export const getCurrentUser = async (
+  decoded,
+  /* eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars */
+  { token, type },
+  /* eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars */
+  { event, context }
+) => {
+  if (!decoded) {
+    return null
   }
 
-  return await db.user.findUnique({
-    where: { id: session.id },
-    select: { id: true },
-  })
+  const { roles } = parseJWT({ decoded })
+
+  if (roles) {
+    return { ...decoded, roles }
+  }
+
+  return { ...decoded }
 }
 
 /**

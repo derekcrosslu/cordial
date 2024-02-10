@@ -84,15 +84,15 @@ const ReservaForm = (props) => {
 
         <FieldError name="invitados" className="rw-field-error" />
 
-        <Label
+        {/* <Label
           name="numeracion"
           className="rw-label"
           errorClassName="rw-label rw-label-error"
         >
           Numeracion
-        </Label>
+        </Label> */}
 
-        <NumberField
+        {/* <NumberField
           name="numeracion"
           defaultValue={props.reserva?.numeracion}
           className="rw-input"
@@ -100,7 +100,7 @@ const ReservaForm = (props) => {
           validation={{ required: true }}
         />
 
-        <FieldError name="numeracion" className="rw-field-error" />
+        <FieldError name="numeracion" className="rw-field-error" /> */}
 
         <Label
           name="mesa"

@@ -22,7 +22,7 @@ export const schema = gql`
     nombre: String!
     area: String!
     invitados: Int!
-    numeracion: [String]!
+    # numeracion: [String]!
     mesa: Int!
     fecha: DateTime!
     telefono: String!

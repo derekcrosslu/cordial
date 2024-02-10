@@ -63,10 +63,10 @@ const Reserva = ({ reserva }) => {
               <th>Invitados</th>
               <td>{reserva.invitados}</td>
             </tr>
-            <tr>
+            {/* <tr>
               <th>Numeracion</th>
               <td>{reserva.numeracion}</td>
-            </tr>
+            </tr> */}
             <tr>
               <th>Mesa</th>
               <td>{reserva.mesa}</td>

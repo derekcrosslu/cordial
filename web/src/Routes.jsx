@@ -10,6 +10,7 @@
 import { Set, Router, Route } from '@redwoodjs/router'
 
 import ScaffoldLayout from 'src/layouts/ScaffoldLayout'
+import GlobalLayout from 'src/layouts/GlobalLayout/GlobalLayout'
 
 import { useAuth } from './auth'
 
@@ -18,6 +19,7 @@ const Routes = () => {
     <Router useAuth={useAuth}>
       <Route path="/" page={HomePage} name="home" />
       <Route path="/login" page={LoginPage} name="login" />
+      <Route path="/signin" page={SigninPage} name="signin" />
       <Route path="/signup" page={SignupPage} name="signup" />
       <Route path="/forgot-password" page={ForgotPasswordPage} name="forgotPassword" />
       <Route path="/reset-password" page={ResetPasswordPage} name="resetPassword" />

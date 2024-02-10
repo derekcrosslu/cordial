@@ -29,10 +29,10 @@ model Reserva {
     nombre     String
     area       String
     invitados  Int
-    numeracion String[]
+    numeracion String?
     mesa       Int
-    fecha      DateTime 
-    telefono   String
+    fecha      DateTime
+    telefono   String?
     email      String?   @unique
 }
 
