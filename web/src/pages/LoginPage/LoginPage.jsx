@@ -17,13 +17,14 @@ import { useAuth } from 'src/auth'
 
 const LoginPage = () => {
   const { isAuthenticated, logIn } = useAuth()
-  // console.log("isAuthenticated: ", isAuthenticated);
+  console.log("isAuthenticated login: ", isAuthenticated);
+  console.log('supabase url', process.env.REDWOOD_ENV_SUPABASE_URL);
 
-  useEffect(() => {
-    if (isAuthenticated) {
-      navigate(routes.reservas())
-    }
-  }, [isAuthenticated])
+  // useEffect(() => {
+  //   if (isAuthenticated) {
+  //     navigate(routes.reservas())
+  //   }
+  // }, [isAuthenticated])
 
   const usernameRef = useRef(null)
   useEffect(() => {
@@ -39,13 +40,13 @@ const LoginPage = () => {
       })
       console.log("response: ", response);
 
-    if (response.message) {
-      toast(response.message)
-    } else if (response.error) {
-      toast.error(response.error)
-    } else {
-      toast.success('Welcome back!')
-    }
+    // if (response.message) {
+    //   toast(response.message)
+    // } else if (response.error) {
+    //   toast.error(response.error)
+    // } else {
+    //   toast.success('Welcome back!')
+    // }
   }
 
   return (
