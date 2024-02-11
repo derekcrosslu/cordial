@@ -10,7 +10,7 @@ const ReservasPage = () => {
   useEffect(() => {
     if (!isAuthenticated) {
       console.log("if isAuthenticated: ", isAuthenticated);
-      // navigate(routes.login())
+      navigate(routes.login())
     }
   }, [isAuthenticated])
   return <ReservasCell />
