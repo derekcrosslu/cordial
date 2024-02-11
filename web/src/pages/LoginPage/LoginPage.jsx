@@ -69,7 +69,7 @@ const LoginPage = () => {
                     className="rw-label"
                     errorClassName="rw-label rw-label-error"
                   >
-                    Username
+                    Usuario
                   </Label>
                   <TextField
                     name="username"
@@ -91,7 +91,7 @@ const LoginPage = () => {
                     className="rw-label"
                     errorClassName="rw-label rw-label-error"
                   >
-                    Password
+                    Clave
                   </Label>
                   <PasswordField
                     name="password"
