@@ -32,10 +32,12 @@ const LoginPage = () => {
 
   const onSubmit = async (data) => {
     console.log("data: ", data);
-    const response = await logIn({
-      username: data.username,
-      password: data.password,
-    })
+     const response = await logIn({
+       email: data.email,
+       password: data.password,
+       authMethod: 'password', // This line is added to meet the expected type
+      })
+      console.log("response: ", response);
 
     if (response.message) {
       toast(response.message)
