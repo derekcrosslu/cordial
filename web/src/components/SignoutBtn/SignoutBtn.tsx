@@ -9,7 +9,7 @@ const SignoutBtn = () => {
     navigate(routes.home())
   }
 
-  return <button onClick={() => onClick()}>Sign Out</button>
+  return <button className='rw-button rw-button-green' onClick={() => onClick()}>Sign Out</button>
 }
 
 export default SignoutBtn

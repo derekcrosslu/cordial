@@ -18,12 +18,12 @@ const Routes = () => {
   return (
     <Router useAuth={useAuth}>
       <Route path="/" page={HomePage} name="home" />
+      <Set wrap={GlobalLayout} title="Reservas" titleTo="reservas" buttonLabel="New Reserva" buttonTo="newReserva">
       <Route path="/login" page={LoginPage} name="login" />
       <Route path="/signin" page={SigninPage} name="signin" />
       <Route path="/signup" page={SignupPage} name="signup" />
       <Route path="/forgot-password" page={ForgotPasswordPage} name="forgotPassword" />
       <Route path="/reset-password" page={ResetPasswordPage} name="resetPassword" />
-      <Set wrap={ScaffoldLayout} title="Reservas" titleTo="reservas" buttonLabel="New Reserva" buttonTo="newReserva">
         <Route path="/reservas/new" page={ReservaNewReservaPage} name="newReserva" />
         <Route path="/reservas/{id:Int}/edit" page={ReservaEditReservaPage} name="editReserva" />
         <Route path="/reservas/{id:Int}" page={ReservaReservaPage} name="reserva" />

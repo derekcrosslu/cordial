@@ -12,7 +12,7 @@ const Navigation = () => {
       ) : (
         <>
           {/* <Link to={routes.signup()}>Sign Up</Link> */}
-          <Link to={routes.signin()}>Sign In</Link>
+          {/* <Link to={routes.signin()}>Sign In</Link> */}
         </>
       )}
     </nav>

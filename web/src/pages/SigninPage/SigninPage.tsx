@@ -4,7 +4,7 @@ import { useAuth } from 'src/auth'
 
 const SigninPage = () => {
   const { logIn, isAuthenticated } = useAuth()
-  console.log("isAuthenticated: ", isAuthenticated);
+  console.log('isAuthenticated: ', isAuthenticated)
 
   const [error, setError] = React.useState(null)
 
@@ -17,11 +17,10 @@ const SigninPage = () => {
         password: data.password,
         authMethod: 'password', // This line is added to meet the expected type
       })
-      // console.log('response: ', response)
-      console.log("response: ", response.data);
-      // response?.error?.message
-      //   ? setError(response.error.message)
-      //   : navigate(routes.home())
+      console.log('response: ', response)
+      response?.error?.message
+        ? setError(response.error.message)
+        : navigate(routes.home())
       // do something with the response
     } catch (error) {
       setError(error.message)

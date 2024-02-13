@@ -1,5 +1,4 @@
-import { useRef } from 'react'
-import { useEffect } from 'react'
+
 
 import {
   Form,
@@ -10,15 +9,15 @@ import {
   FieldError,
 } from '@redwoodjs/forms'
 import { Link, navigate, routes } from '@redwoodjs/router'
-import { MetaTags } from '@redwoodjs/web'
+
 import { toast, Toaster } from '@redwoodjs/web/toast'
 
 import { useAuth } from 'src/auth'
 
+
 const LoginPage = () => {
   const { isAuthenticated, logIn } = useAuth()
-  console.log("isAuthenticated login: ", isAuthenticated);
-  console.log('supabase url', process.env.REDWOOD_ENV_SUPABASE_URL);
+
 
   // useEffect(() => {
   //   if (isAuthenticated) {
@@ -26,32 +25,32 @@ const LoginPage = () => {
   //   }
   // }, [isAuthenticated])
 
-  const usernameRef = useRef(null)
-  useEffect(() => {
-    usernameRef.current?.focus()
-  }, [])
+  // const usernameRef = useRef(null)
+  // useEffect(() => {
+  //   usernameRef.current?.focus()
+  // }, [])
 
-  const onSubmit = async (data) => {
+  const onSubmit = async (data: { email: string; password: string }) => {
     console.log("data: ", data);
      const response = await logIn({
        email: data.email,
        password: data.password,
        authMethod: 'password', // This line is added to meet the expected type
       })
-      console.log("response: ", response);
 
-    // if (response.message) {
-    //   toast(response.message)
-    // } else if (response.error) {
-    //   toast.error(response.error)
-    // } else {
-    //   toast.success('Welcome back!')
-    // }
+    if (response?.error?.message) {
+      toast(response?.error?.message)
+    } else if (response.error) {
+      toast.error(response?.error?.message)
+    } else {
+      // toast.success('Welcome back!')
+      navigate(routes.reservas())
+    }
   }
 
   return (
     <>
-      <MetaTags title="Login" />
+      {/* <MetaTags title="Login" /> */}
 
       <main className="rw-main">
         <Toaster toastOptions={{ className: 'rw-toast', duration: 6000 }} />
@@ -72,10 +71,11 @@ const LoginPage = () => {
                     Usuario
                   </Label>
                   <TextField
-                    name="username"
+                    name="email"
                     className="rw-input"
                     errorClassName="rw-input rw-input-error"
-                    ref={usernameRef}
+                    // ref={usernameRef}
+                    placeholder="email"
                     validation={{
                       required: {
                         value: true,
@@ -104,7 +104,9 @@ const LoginPage = () => {
                         message: 'Password is required',
                       },
                     }}
+                    placeholder="password"
                   />
+
 
                   <div className="rw-forgot-link">
                     <Link
